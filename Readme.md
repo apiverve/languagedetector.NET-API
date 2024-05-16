@@ -70,8 +70,8 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new languagedetectorQueryOptions{
-  text: "esta es una frase en español. esta API puede detectar fácilmente el idioma"
+var queryOptions = new languagedetectorQueryOptions {
+  text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 ```
 
