@@ -71,8 +71,7 @@ Using the API client, you can perform requests to the API.
 
 ```
 var queryOptions = new languagedetectorQueryOptions{
-  "text": "esta es una frase en español. esta API puede detectar fácilmente el idioma",
-  "limit": "5"
+  text: "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 ```
 
@@ -83,7 +82,7 @@ var response = apiClient.Execute(queryOptions);
 if(response.error != null) {
 	Console.WriteLine(response.error);
 } else {
-    var jsonResponse = JsonConvert.SerializeObject(response.data, Newtonsoft.Json.Formatting.Indented);
+    var jsonResponse = JsonConvert.SerializeObject(response, Newtonsoft.Json.Formatting.Indented);
     Console.WriteLine(jsonResponse);
 }
 ```
