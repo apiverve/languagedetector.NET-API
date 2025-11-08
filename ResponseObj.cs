@@ -4,33 +4,37 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("language")]
-    public string language { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("language")]
+        public string Language { get; set; }
 
-    [JsonProperty("confidence")]
-    public double confidence { get; set; }
+        [JsonProperty("confidence")]
+        public double Confidence { get; set; }
 
-    [JsonProperty("code")]
-    public string code { get; set; }
+        [JsonProperty("code")]
+        public string Code { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data[] Data { get; set; }
 
-    [JsonProperty("data")]
-    public data[] data { get; set; }
+        [JsonProperty("code")]
+        public int Code { get; set; }
 
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
